@@ -5,6 +5,7 @@
 	<title>The List</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
 	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
@@ -14,32 +15,20 @@
 	</div>
 	<div class="list">
 			<h1>Shopping List</h1>
-			<input id="item">
-			<button type="submit" id="add">+</button>
-			<div class="item">
-				<div class="item-new"></div>
-				<div class="item-crossed">Chicken</div>
-			</div>
-			<div class="item2">
-				<div class="item2-new">Eggs</div>
-				<div class="item2-crossed"></div>
-			</div>
-			<div class="item3">
-				<div class="item3-new">Cheese</div>
-				<div class="item3-crossed"></div>
-			</div>
-			<div class="item4">
-				<div class="item4-new"></div>
-				<div class="item4-crossed">Pop-Tarts</div>
-			</div>
-			<div class="item5">
-				<div class="item5-new">Corn</div>
-				<div class="item5-crossed"></div>
-			</div>
-			<div class="item5">
-				<div class="item5-new">Bread</div>
-				<div class="item5-crossed"></div>
-			</div>
+			<input class="ti" id="item" type="text" placeholder="Add items to list">
+			<button type="submit" class="btn_sendMessage" id="btn_createList">+</button>
+			<ul id="ul_current" class="ul_current">
+				<li class="items">
+					<span>Chicken</span>
+					<img class="delete" src="images/delete.png">
+					<img class="check" src="images/check.png">
+				</li>
+				<li class="items-checked">
+					<span>Chicken</span>
+					<img class="delete" src="images/delete.png">
+					<img class="check" src="images/check.png">
+				</li>
+			</ul>
 			<br style="clear:both;">
 	</div>
 </body>
