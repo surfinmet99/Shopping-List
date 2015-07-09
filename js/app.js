@@ -1,9 +1,10 @@
 /*js*/
 $(document).ready(function(){
 	$('#btn_createList').click(function(){
-		$('.ul_current').append($('<li>', {
-			text: $('#item').val()
-		}));
+		var item=$('#item').val();
+			var li_string='<li>'+item+'</li>';
+			var ul_obj=$('.ul_current');
+			ul_obj.append(li_string);
 	});
 });
 
@@ -36,5 +37,11 @@ $(document).ready(function(){
 	$('.items-checked').mousedown(function(){
 		$('.items').show();
 		$('.items-checked').hide();
+	})
+
+
+	$('ul.ul_current').on('click', 'li', function() {
+		$(this).after('<li>'+li_string+'</li>');
 	});
 });
+
