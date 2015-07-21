@@ -27,11 +27,11 @@ body {
 	text-align: center;
 }
 
-#item {
+#input {
 	height: 25px;
 	width: 200px;
 	text-align: center;
-	margin: 0em 2em 1.5em 11.85em;
+	margin: -1em 2em 0.5em 10.85em;
 	border: 1px solid;
 	border-radius: 19px;
 }
@@ -87,15 +87,9 @@ button {
 	font-weight: bolder;
 }
 
-.items {
-	background-image: url('../images/paper-li.png');
-	width: 580px;
-	margin: 16px 0px 0px -121px;
-}
 
-.items-checked {
+.checked {
 	text-decoration: line-through;
-	display: none;
 }
 
 .delete {
@@ -130,4 +124,13 @@ li div img {
 
 li span {
 	margin: 0px 0px 0px 105px;
+}
+
+.btn_reset {
+	background-color: darkGray;
+	font-weight: bold;
+	display: block;	
+	margin: 0px 0px 15px 215px;
+	width: 8em;
+	font-size: initial;
 }

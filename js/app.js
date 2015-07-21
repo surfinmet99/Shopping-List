@@ -1,47 +1,49 @@
 /*js*/
 $(document).ready(function(){
-	$('#btn_createList').click(function(){
-		var item=$('#item').val();
-			var li_string='<li>'+item+'</li>';
+	$("body").on("click", ".btn_sendMessage", function(){
+		var item=$('#input').val();
+		console.log('DEBUG item %o', item);
+		var list_str='<li>'+item+'<div class="delete"><img src="images/delete.png"></div><div class="check"><img src="images/check.png"></div></li>';
+		console.log('DEBUG item %o', list_str);
+		var ul_obj=$('.ul_current');
+		ul_obj.append(list_str);
+	});
+
+	$("body").keydown (function (e) {
+			var item=$('#input').val();
+			var list_str='<li>'+item+'</div><div class="delete"><img src="images/delete.png"></div><div class="check"><img src="images/check.png"></div></li>';
 			var ul_obj=$('.ul_current');
-			ul_obj.append(li_string);
+
+			if (e.keyCode == 13) {
+				ul_obj.append(list_str);
+			}  
+
+			
 	});
 });
 
 $(document).ready(function(){
-	$('.items').mouseenter(function(){
+	$('.ul_current').mouseenter(function(){
 		$('.delete').show();
 		$('.check').show();
 	})
 
-	$('.items-checked').mouseenter(function(){
-		$('.delete').show();
-		$('.check').show();
-	})
-
-	$('.items').mouseleave(function(){
+	
+	$('.ul_current').mouseleave(function(){
 		$('.delete').hide();
 		$('.check').hide();
 	});
 
-	$('.items-checked').mouseleave(function(){
-		$('.delete').hide();
-		$('.check').hide();
+	$('.ul_current').on('click', '.delete', function() {
+		$(this).parent('li').remove();
 	});
 
-	$('.items').mousedown(function(){
-		$('.items-checked').show();
-		$('.items').hide();
-	})
+	$('.ul_current').on('click', '.check', function() {
+		$(this).parent('li').toggleClass('checked');
+	});
 
-	$('.items-checked').mousedown(function(){
-		$('.items').show();
-		$('.items-checked').hide();
-	})
-
-
-	$('ul.ul_current').on('click', 'li', function() {
-		$(this).after('<li>'+li_string+'</li>');
+	$('.btn_reset').on('click', function(){
+		$('.ul_current').empty();
 	});
 });
 
