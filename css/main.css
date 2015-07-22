@@ -88,7 +88,7 @@ button {
 }
 
 .ul_current li {
-	background-image: url('../images/paper-li.png');
+	background-image: url('../images/paper-li.PNG');
 	background-size: initial;
 	margin: -4.5px 0px 0px -121px;
 	width: 516px;
