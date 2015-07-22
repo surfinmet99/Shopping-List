@@ -31,7 +31,7 @@ body {
 	height: 25px;
 	width: 200px;
 	text-align: center;
-	margin: -1em 2em 0.5em 10.85em;
+	margin: -1em 2em 2.09em 10.85em;
 	border: 1px solid;
 	border-radius: 19px;
 }
@@ -87,6 +87,13 @@ button {
 	font-weight: bolder;
 }
 
+.ul_current li {
+	background-image: url('../images/paper-li.png');
+	background-size: initial;
+	margin: -4.5px 0px 0px -121px;
+	width: 516px;
+	padding-left: 4em;
+}
 
 .checked {
 	text-decoration: line-through;

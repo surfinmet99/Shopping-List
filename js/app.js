@@ -7,31 +7,31 @@ $(document).ready(function(){
 		console.log('DEBUG item %o', list_str);
 		var ul_obj=$('.ul_current');
 		ul_obj.append(list_str);
+		$('#input').val('');
 	});
 
 	$("body").keydown (function (e) {
-			var item=$('#input').val();
-			var list_str='<li>'+item+'</div><div class="delete"><img src="images/delete.png"></div><div class="check"><img src="images/check.png"></div></li>';
-			var ul_obj=$('.ul_current');
-
-			if (e.keyCode == 13) {
-				ul_obj.append(list_str);
-			}  
-
 			
+			if (e.keyCode == 13) {
+				var item=$('#input').val();
+				var list_str='<li>'+item+'</div><div class="delete"><img src="images/delete.png"></div><div class="check"><img src="images/check.png"></div></li>';
+				var ul_obj=$('.ul_current');
+				ul_obj.append(list_str);
+				$('#input').val('');
+			}  	
 	});
 });
 
 $(document).ready(function(){
-	$('.ul_current').mouseenter(function(){
-		$('.delete').show();
-		$('.check').show();
-	})
+	$('.ul_current').on('mouseenter', 'li', function(){
+		$(this).children('.delete').show();
+		$(this).children('.check').show();
+	});
 
 	
-	$('.ul_current').mouseleave(function(){
-		$('.delete').hide();
-		$('.check').hide();
+	$('.ul_current').on('mouseleave', 'li', function(){
+		$(this).children('.delete').hide();
+		$(this).children('.check').hide();
 	});
 
 	$('.ul_current').on('click', '.delete', function() {
@@ -45,5 +45,7 @@ $(document).ready(function(){
 	$('.btn_reset').on('click', function(){
 		$('.ul_current').empty();
 	});
+
+
 });
 
