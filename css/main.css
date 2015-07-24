@@ -11,12 +11,11 @@ body {
 	background-image: url('../images/white-paper2.png');
 	background-size: 100%;
 	background-repeat: no-repeat;
-	background-position: top center;
+	background-position: relative;
 	width: 580px;
 	min-height: 200px;
-	margin: 0px 200px 0px 400px;
-	padding-top: 30px;
-	position: relative;
+	margin: 0em 0em 0em 26em;
+	padding-top: 2em;
 }
 
 .list h1 {
@@ -25,13 +24,14 @@ body {
 	font-weight: bolder;
 	font-family: 'Gloria Hallelujah', cursive;
 	text-align: center;
+	margin: 0.67em 0em .5em 0em;
 }
 
 #input {
 	height: 25px;
 	width: 200px;
 	text-align: center;
-	margin: -1em 2em 2.09em 10.85em;
+	margin: -1em 2em 2.09em 11.85em;
 	border: 1px solid;
 	border-radius: 19px;
 }
@@ -43,8 +43,8 @@ button {
 	font-size: 22px;
 	border: 1px solid;
 	border-radius: 19px;
-	padding: 0 0 3px 0;
-	margin: 0 0 0 -20px;
+	padding: 0em 0em 0em 0em;
+	margin: 0em 0em 0em -1em;
 	vertical-align: middle;
 }
 
@@ -61,8 +61,8 @@ button {
 	color: white;
 	font-family: serif;
 	margin: 0em;
-	padding-top: 25px;
-	padding-left: 5px;
+	padding-top: 1.5em;
+	padding-left: .25em;
 	float: left;
 }
 
@@ -77,9 +77,8 @@ button {
 	width: 375px;
 	text-align: left;
 	margin: -1em 3em .59em 7.55em;
-	padding-top: 10px;
+	padding-top: 1em;
 	padding-left: 0em;
-	position: relative;
 	color: black;
 	font-size: 100%;
 	font-family: 'Gloria Hallelujah', cursive;
@@ -89,7 +88,7 @@ button {
 
 .ul_current li {
 	background-image: url('../images/paper-li.PNG');
-	background-size: initial;
+	background-size: relative;
 	margin: -4.5px 0px 0px -121px;
 	width: 516px;
 	padding-left: 4em;
@@ -138,7 +137,8 @@ li span {
 	background-color: darkGray;
 	font-weight: bold;
 	display: block;	
-	margin: 0px 0px 15px 215px;
+	margin: 0em 0em 1em 14em;
 	width: 8em;
 	font-size: initial;
+
 }
