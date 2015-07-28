@@ -89,9 +89,11 @@ button {
 .ul_current li {
 	background-image: url('../images/paper-li.PNG');
 	background-size: relative;
-	margin: -4.5px 0px 0px -121px;
+	margin: -.56em 0em 0em -7.55em;
 	width: 516px;
 	padding-left: 4em;
+	padding-top: .24em;
+	padding-bottom: .005em;
 }
 
 .checked {
@@ -103,7 +105,7 @@ button {
 	height: 20px;
 	width: 20px;
 	float: right;
-	margin: 5px 0px 0px 0px;
+	margin: 0.1em 0em 0em 0em;
 	display: none;
 }
 
@@ -111,7 +113,7 @@ button {
 	height: 20px;
 	width: 20px;
 	float: right;
-	margin: 5px 10px 0px 0px;
+	margin: 0.1em 1em 0em 0em;
 	display: none;
 }
 
